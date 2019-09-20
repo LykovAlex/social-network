@@ -1,0 +1,38 @@
+.post{
+  margin-bottom: 40px;
+  color: white;
+  background-color: #91cfde;
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  width: 50%;
+}
+.post__wrapper{
+  display: flex;
+  align-items: center;
+}
+.post__img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+.post__text{
+  font-size: 1.25rem;
+  margin-left: 20px;
+
+}
+.post__likes{
+  color: #f85959;
+  text-align: left;
+}
+.post__countLikes{
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  padding: 7px;
+  background-color: #f85959;
+  color: white;
+  border: 1px solid #f85959;
+}

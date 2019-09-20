@@ -1,0 +1,14 @@
+.header{
+  background-color: #91cfde;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.header__logo{
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 80px;
+  padding: 20px;
+  margin: 0 auto;
+}

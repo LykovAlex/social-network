@@ -1,0 +1,14 @@
+.friend{
+  padding: 10px;
+}
+.friend__link{
+  text-decoration: none;
+}
+.friend__photo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.friend__name{
+  color: black;
+}

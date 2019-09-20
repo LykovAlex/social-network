@@ -1,0 +1,14 @@
+.wrapper{
+  display: flex;
+}
+.dialogs{
+  flex-grow: 1;
+  border-right: 1px solid #f85959;
+  padding-right: 40px;
+}
+.messages{
+  flex-grow: 8;
+}
+/* .messages__item{
+    text-align: center;
+} */

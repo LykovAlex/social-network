@@ -1,0 +1,11 @@
+.message{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f85959;
+  padding: 5px 20px;
+  margin: 10px auto;
+  color: white;
+  width: 69%;
+  border-radius: 10px;
+}

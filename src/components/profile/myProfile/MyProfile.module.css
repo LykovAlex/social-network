@@ -1,0 +1,12 @@
+.myProfile{
+  display: flex;
+  align-items: center;
+}
+.myProfile__photo{
+  max-width: 200px;
+}
+.myProfile__info{
+  margin-left: 20px;
+  border-left: 2px solid #91cfde;
+  padding: 20px;
+}

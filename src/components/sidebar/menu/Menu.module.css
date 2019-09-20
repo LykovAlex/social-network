@@ -1,0 +1,18 @@
+.menu{
+  padding: 80px 10px;
+
+}
+.menu__item{
+  list-style: none;
+  margin-bottom:20px;
+}
+.menu__link{
+  color: black;
+  text-decoration: none;
+}
+.active{
+  color: blue;
+}
+.menu__link:hover{
+  color: #91cfde;
+}
