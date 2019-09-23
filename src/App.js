@@ -10,6 +10,7 @@ import Settings from './components/settings/Settings';
 import {BrowserRouter, Route} from 'react-router-dom'
 
 const App = (props) => {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -17,7 +18,7 @@ const App = (props) => {
         <div className='contentWrapper'>
           <Sidebar state={props.state.sidebar} />
           <main className="main">
-            <Route path='/profile' render={ () => <Profile state={props.state.postsPages} dispatch={props.dispatch}/> } />
+            <Route path='/profile' render={ () => <Profile state={props.state.profilePages} dispatch={props.dispatch}/> } />
             {/*<Route path='/messages' render={ () => <Messages state={props.state.messagesPages} dispatch={props.dispatch}/> }></Route>*/}
             {/* фишка exact в том, что он находит строгое совпадение и отрисует компонент только если урл строго соотвествует
               тоесть например если урл будет /messages/1 он уже в данном случае не отрисует компонент message */}
