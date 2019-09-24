@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Messages.module.css';
 import Dialog from './dialog/Dialog';
 import Message from './message/Message';
-import NewMessage from './newMessage/NewMessage';
+import NewMessageContainer from './newMessage/NewMessageContainer';
 
 
 const Messages = (props) => {
@@ -24,7 +24,7 @@ const Messages = (props) => {
         <div className="messages__items">
           {messagesElements}
         </div>
-        <NewMessage newMessageText={props.state.newMessageText} dispatch={props.dispatch} />
+        <NewMessageContainer newMessageText={props.state.newMessageText} dispatch={props.dispatch} />
       </div>
     </div>
   )
