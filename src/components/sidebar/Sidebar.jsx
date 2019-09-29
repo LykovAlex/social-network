@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './menu/Menu';
-import Friends from './friends/Friends';
+import FriendsContainer from './friends/FriendsContainer';
 import style from './Sidebar.module.css';
 
 const Sidebar = (props) => {
@@ -8,7 +8,7 @@ const Sidebar = (props) => {
   return (
     <div className={style.sidebar}>
       <Menu/>
-      <Friends friends={props.state.friends}/>
+      <FriendsContainer />
     </div>
   )
 }

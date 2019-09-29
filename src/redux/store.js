@@ -10,6 +10,6 @@ let reducers = combineReducers({
   sidebar: sidebarReducer
 })
 
-let store = createStore(reducers, applyMiddleware(logger));
+// let store = () => createStore(reducers, applyMiddleware(logger));
 
-export default store;
+export default () => createStore(reducers, applyMiddleware(logger));

@@ -8,6 +8,7 @@ const initialState = {
     {message:"It's my first post", likes:"21", id:3},
   ],
   newPostText:'',
+  id: 4
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -16,21 +17,25 @@ const profileReducer = (state = initialState, action) => {
       let newPost = {
         message: state.newPostText,
         likes: 0,
-        id: 4
+        id: state.id++
       }
-      state.posts.push(newPost);
-      state.newPostText = '';
-      return state;
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: ''
+      }
     case UPDATE_POST_TEXT:
-      state.newPostText = action.newText;
-      return state;
+    return {
+      ...state,
+      newPostText: action.payload
+    }
     default:
       return state;
   }
 }
 
 
-export const addPostActionCreater = () => ({type:ADD_POST});
-export const updatePostTextActionCreater = (text) => ({type:UPDATE_POST_TEXT, newText:text});
+export const addPost = () => ({type:ADD_POST});
+export const updatePostText = (text) => ({type:UPDATE_POST_TEXT, payload:text});
 
 export default profileReducer;

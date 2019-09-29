@@ -18,29 +18,35 @@ const initialState = {
     {name:'Sanek', id:7},
     {name:'Nika', id:8},
   ],
-  newMessageText:''
+  newMessageText:'',
+  id: 5
 }
 
 const messagesReducer = (state = initialState, action) => {
   switch (action.type){
     case ADD_MESSAGE:
+    let date = new Date();
       let message = {
         text: state.newMessageText,
-        time: '14:05',
-        id: 5
+        time: `${date.toLocaleTimeString()}`,
+        id: state.id++
       }
-      state.messages.push(message);
-      state.newMessageText = '';
-      return state;
+      return {
+        ...state,
+        messages: [...state.messages, message],
+        newMessageText: ''
+      }
     case UPDATE_MESSAGE_TEXT:
-      state.newMessageText = action.newText;
-      return state;
+      return {
+        ...state,
+        newMessageText: action.payload
+      }
     default:
       return state;
   }
 }
 
-export const addMessageActionCreater = () => ({type:ADD_MESSAGE});
-export const updateMessageTextActionCreater = (text) => ({type:UPDATE_MESSAGE_TEXT, newText:text});
+export const addMessage = () => ({type:ADD_MESSAGE});
+export const updateMessageText = (text) => ({type:UPDATE_MESSAGE_TEXT, payload:text});
 
 export default messagesReducer;

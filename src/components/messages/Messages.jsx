@@ -7,10 +7,10 @@ import NewMessageContainer from './newMessage/NewMessageContainer';
 
 const Messages = (props) => {
 
-  let messagesElements = props.state.messages
+  let messagesElements = props.messages
     .map( message => <Message text={message.text} key={message.id} time={message.time}/> );
 
-  let dialogsElements = props.state.dialogs
+  let dialogsElements = props.dialogs
     .map( dialog => <Dialog name={dialog.name} key={dialog.id} id={dialog.id}/> );
 
   return (
@@ -24,7 +24,7 @@ const Messages = (props) => {
         <div className="messages__items">
           {messagesElements}
         </div>
-        <NewMessageContainer newMessageText={props.state.newMessageText} dispatch={props.dispatch} />
+        <NewMessageContainer />
       </div>
     </div>
   )
